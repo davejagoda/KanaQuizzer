@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		22A2AB1F1436134800525226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A2AB1E1436134800525226 /* Foundation.framework */; };
-		22A2AB221436134800525226 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2AB211436134800525226 /* main.m */; };
+		22A2AB221436134800525226 /* KanaCommandLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2AB211436134800525226 /* KanaCommandLine.m */; };
 		22A2AB261436134800525226 /* KanaCommandLine.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22A2AB251436134800525226 /* KanaCommandLine.1 */; };
+		22A2AB2E143615C600525226 /* Kana.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2AB2D143615C600525226 /* Kana.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +29,11 @@
 /* Begin PBXFileReference section */
 		22A2AB1A1436134800525226 /* KanaCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KanaCommandLine; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A2AB1E1436134800525226 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		22A2AB211436134800525226 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22A2AB241436134800525226 /* KanaCommandLine-Prefix.pch */ = {isa = PBXFileReference; path = "KanaCommandLine-Prefix.pch"; sourceTree = "<group>"; };
+		22A2AB211436134800525226 /* KanaCommandLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KanaCommandLine.m; sourceTree = "<group>"; };
+		22A2AB241436134800525226 /* KanaCommandLine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KanaCommandLine-Prefix.pch"; sourceTree = "<group>"; };
 		22A2AB251436134800525226 /* KanaCommandLine.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = KanaCommandLine.1; sourceTree = "<group>"; };
+		22A2AB2C143615C600525226 /* Kana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kana.h; sourceTree = "<group>"; };
+		22A2AB2D143615C600525226 /* Kana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Kana.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +76,9 @@
 		22A2AB201436134800525226 /* KanaCommandLine */ = {
 			isa = PBXGroup;
 			children = (
-				22A2AB211436134800525226 /* main.m */,
+				22A2AB211436134800525226 /* KanaCommandLine.m */,
+				22A2AB2C143615C600525226 /* Kana.h */,
+				22A2AB2D143615C600525226 /* Kana.m */,
 				22A2AB251436134800525226 /* KanaCommandLine.1 */,
 				22A2AB231436134800525226 /* Supporting Files */,
 			);
@@ -135,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A2AB221436134800525226 /* main.m in Sources */,
+				22A2AB221436134800525226 /* KanaCommandLine.m in Sources */,
+				22A2AB2E143615C600525226 /* Kana.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
