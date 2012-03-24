@@ -96,6 +96,8 @@ int main (int argc, const char * argv[])
     for (i = 0; i < numberOfKana; ++i) {
         [[kana objectAtIndex: i] print];
     }
+    i = arc4random() % numberOfKana;
+    [[kana objectAtIndex: i] print];
     [pool drain];
     return 0;
 }
