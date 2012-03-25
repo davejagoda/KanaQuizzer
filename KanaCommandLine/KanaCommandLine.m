@@ -92,12 +92,17 @@ int main (int argc, const char * argv[])
 
     [[kana objectAtIndex: i] setHiragana:@"ん" setKatakana:@"ン" setRomaji:@"n"];  ++i;
 
-    // walk the array and print it out
-    for (i = 0; i < numberOfKana; ++i) {
-        [[kana objectAtIndex: i] print];
-    }
+    // walk the array and print it out - this worked, so I am commenting it out for now
+    // dj 2012-03-24
+    //for (i = 0; i < numberOfKana; ++i) {
+    //    [[kana objectAtIndex: i] print];
+    //}
     i = arc4random() % numberOfKana;
     [[kana objectAtIndex: i] print];
+    i = arc4random() % numberOfKana;
+    NSLog(@"%@", [[kana objectAtIndex: i] getHiragana]);
+    i = arc4random() % numberOfKana;
+    NSLog(@"%@", [[kana objectAtIndex: i] getKatakana]);
     [pool drain];
     return 0;
 }
