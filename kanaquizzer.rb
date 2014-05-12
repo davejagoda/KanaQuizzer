@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# -*- coding: utf-8 -*-
 
 class KanaQuizzer
   MaxCol = 4
@@ -119,7 +120,7 @@ class KanaQuizzer
     end
   end
 
-  def printanaTable
+  def printKanaTable
 # qa approved 2010-03-04
     for r in (0..MaxRow)
       for c in (0..MaxCol)
@@ -166,7 +167,7 @@ end
 # if len(array)=0, exit, else begin again
 
 k = KanaQuizzer.new
-#k.printKanaTable
+k.printKanaTable
 #k.printRandomKana
 #k.makeWorkingArray
 numKana = k.makeWorkingArray
