@@ -174,3 +174,13 @@ numKana = k.makeWorkingArray
 #puts @w.length
 #k.printWorkingArray
 k.go
+
+# open issues 2014-05-15
+# works on at least ruby 1.8.7 and ruby 2.0.0
+# on ruby 2, it prints out 'unprintable' characters
+
+# TBD 2014-05-15
+# record: letter, answer, and whether correct or not
+# store these locally, but also offer to upload them
+# on game start, offer to fetch kana that are hard
+# make a list of confusing kana
