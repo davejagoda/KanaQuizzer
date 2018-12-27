@@ -60,8 +60,7 @@ class KanaQuizzer
   end
 
   def isThisCharacterPrintable(k)
-# qa approved 2010-03-04
-    if (k[1] == 128 && k[2] == 128)
+    if (k == 0x3000.chr("UTF-8"))
       return false
     else
       return true
@@ -76,17 +75,16 @@ class KanaQuizzer
       for r in (0..MaxRow)
         for c in (0..MaxCol)
           if (isThisCharacterPrintable(@l[p][r][c]))
-	    @w.insert(-1, [p,r,c,0])
-	    i += 1
-	  end
-	end
+            @w.insert(-1, [p,r,c,0])
+            i += 1
+          end
+        end
       end
     end
     return i
   end
 
   def printWorkingArray
-# qa approved 2010-03-04
     @w.each do |w|
       print @l[w[0]][w[1]][w[2]]
       puts w[3]
@@ -104,8 +102,8 @@ class KanaQuizzer
 # if correct count >= NumberToGetRight, delete this element from the list, tell the the user they mastered this kana
       if @w[i][3] >= NumberToGetRight
         puts "congratulations, you've mastered this kana!"
-	@w.delete_at(i)
-	puts @w.length
+        @w.delete_at(i)
+        puts @w.length
       end
     else
       puts "wrong"
@@ -121,7 +119,6 @@ class KanaQuizzer
   end
 
   def printKanaTable
-# qa approved 2010-03-04
     for r in (0..MaxRow)
       for c in (0..MaxCol)
         print @l[Hiragana][r][c] + @l[Katakana][r][c] + " "
@@ -131,7 +128,6 @@ class KanaQuizzer
   end
 
   def printRandomKana
-# qa approved 2010-03-04
     p = rand(2)
     r = rand(11)
     c = rand(5)
@@ -144,17 +140,17 @@ class KanaQuizzer
   end
 end
 
-#	h = l[Hiragana][r][c]
+#        h = l[Hiragana][r][c]
 # only add it to the working array if it's printable
-#	print h[0] #always 227 (0xE3)
-#	print h[1] #129 (0x81) to 130 (0x82)
-#	print h[2] #130 (0x82) to 147 (0x93)
-#	print h[3] #always nil
-#	k = l[Katakana][r][c]
-#	print k[0] #always 227 (0xE3)
-#	print k[1] #130 (0x82) to 131 (0x83)
-#	print k[2] #162 (0xA2) to 179 (0xB3)
-#	print k[3] #always nil
+#        print h[0] #always 227 (0xE3)
+#        print h[1] #129 (0x81) to 130 (0x82)
+#        print h[2] #130 (0x82) to 147 (0x93)
+#        print h[3] #always nil
+#        k = l[Katakana][r][c]
+#        print k[0] #always 227 (0xE3)
+#        print k[1] #130 (0x82) to 131 (0x83)
+#        print k[2] #162 (0xA2) to 179 (0xB3)
+#        print k[3] #always nil
 
 # need a structure to keep track of remaining
 # kana that need to be asked
